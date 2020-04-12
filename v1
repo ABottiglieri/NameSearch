@@ -1,0 +1,41 @@
+girls = open ('GirlNames.txt', 'r')
+girls1 = girls.readlines()
+boys = open ('BoyNames.txt', 'r')
+boys1 = boys.readlines()
+
+
+name_type = input("Enter 'boy', 'girl', or 'both':")
+
+
+if name_type == 'girl':
+	girlname = input("Enter a girl's name:")
+	if girlname + '\n' in girls1:
+		print(girlname, "was a popular girl's name between 2000 and 2009.") 
+	elif girlname + '\n' not in girls1:
+		print(girlname, "was not a popular girl's name between 2000 and 2009.") 
+	
+	
+elif name_type == 'boy':
+	boyname = input("Enter a boy's name:")
+	if boyname + '\n' in boys1:
+		print(boyname, "was a popular boy's name between 2000 and 2009.") 
+	elif boyname + '\n' not in boys1:
+		print(boyname, "was not a popular boy's name between 2000 and 2009.") 
+	
+	
+elif name_type == 'both':
+	boyname = input("Enter a boy's name:")
+	if boyname + '\n' in boys1:
+		print(boyname, "was a popular boy's name between 2000 and 2009.") 
+	else:
+		print(boyname, "was not a popular boy's name between 2000 and 2009.")
+		
+	girlname = input("Enter a girl's name:")
+	if girlname + '\n' in girls1:
+		print(girlname, "was a popular girl's name between 2000 and 2009.") 
+	else:
+		print(girlname, "was not a popular girl's name between 2000 and 2009.")
+		
+		
+girls.close()
+boys.close()
